@@ -1,0 +1,13 @@
+# Secrets & runtime state — never commit
+config.yaml
+data/
+state.json
+*.session
+
+# Compiled binary
+x-keyword-monitor
+/x-keyword-monitor
+
+# OS / editor noise
+.DS_Store
+*.swp

@@ -1,0 +1,26 @@
+# x-keyword-monitor configuration
+# Copy to config.yaml and fill in real values. config.yaml is gitignored.
+
+discord:
+  bot_token: "YOUR_DISCORD_BOT_TOKEN"
+  guild_id: ""          # optional: guild ID for instant slash-command registration (empty = global, ~1h propagation)
+  default_channel: ""   # optional fallback channel ID
+
+twitter:
+  health_check_interval: "5m"
+  cookies:
+    - auth_token: "AUTH_TOKEN_1"
+      ct0: "CT0_1"
+      label: "main"
+    - auth_token: "AUTH_TOKEN_2"
+      ct0: "CT0_2"
+      label: "backup"
+
+search:
+  poll_interval: "20s"      # full-cycle interval; <15s risks rate limits
+  tweets_per_query: 20      # results pulled per keyword per cycle
+  per_keyword_delay: "400ms" # pause between keyword queries within a cycle
+
+logging:
+  level: "info"             # debug | info | warn | error
+  timezone: "Asia/Jakarta"
